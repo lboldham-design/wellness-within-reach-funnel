@@ -770,6 +770,82 @@ section { padding: 80px 0; }
 .success-message h3 { color: var(--sage-dark); margin-bottom: 8px; }
 .success-message p  { font-size: 0.92rem; }
 
+.success-divider {
+  height: 1px;
+  background: var(--cream-dark);
+  margin: 20px 0;
+}
+
+.success-offer {
+  text-align: center;
+}
+
+.success-offer__q {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 10px;
+}
+
+.success-offer__prompt {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--charcoal);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.success-offer__cta {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.success-offer__skip {
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: var(--font-sans);
+  padding: 4px;
+  transition: color var(--transition);
+}
+
+.success-offer__skip:hover { color: var(--mid); }
+
+/* --- Form Trust Signals --- */
+.form-trust {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--cream-dark);
+}
+
+.form-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--light);
+}
+
+.form-trust__item svg { color: var(--sage); flex-shrink: 0; }
+
+.form-trust__stars {
+  color: #F4B942;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
 /* --- Notification Toast --- */
 .toast {
   position: fixed;

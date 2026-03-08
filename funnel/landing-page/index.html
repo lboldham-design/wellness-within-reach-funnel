@@ -30,13 +30,13 @@
         <div class="hero__copy">
           <span class="hero__eyebrow">Free Resource for You</span>
           <h1 class="hero__headline">
-            You deserve to feel <em>calm</em> — even on your most overwhelming days.
+            Stop Running on Empty.<br><em>Feel Calm Again</em> — in 5 Minutes.
           </h1>
           <p class="hero__sub">
-            If you're a busy parent or professional running on fumes — juggling everything while your nervous system quietly screams — this free guide was made for you.
+            You're a busy parent or professional doing everything right — and still feeling like you're one email away from breaking. This free guide gives you the exact nervous system tools to reset, breathe, and feel human again.
           </p>
           <a href="#optin" class="btn btn--primary btn--large">
-            Yes, I want the free guide
+            Yes — Send Me the Free Guide &rarr;
           </a>
           <div class="hero__trust">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -61,14 +61,21 @@
 
           <div class="success-message" id="successMsg">
             <div class="success-icon">&#10003;</div>
-            <h3>You're in!</h3>
-            <p>Check your inbox — your guide is on its way. (Check spam just in case.)</p>
+            <h3 id="successName">You're in!</h3>
+            <p>Your Nervous System Rescue Guide is headed to your inbox right now. Check spam if you don't see it within 2 minutes.</p>
+            <div class="success-divider"></div>
+            <div class="success-offer">
+              <p class="success-offer__q">One quick question while your guide arrives...</p>
+              <p class="success-offer__prompt">Ready to reset your nervous system in just 5 minutes a day — with a complete done-for-you toolkit?</p>
+              <a href="../offer-page/index.html" class="btn btn--primary success-offer__cta">Yes — Show Me How &rarr;</a>
+              <button class="success-offer__skip" id="skipOffer">No thanks, just the guide for now</button>
+            </div>
           </div>
 
-          <form class="optin-form" id="optinForm" novalidate>
+          <form class="optin-form" id="lead-form" novalidate>
             <div class="form-field">
               <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Your first name" autocomplete="given-name" />
+              <input type="text" id="firstName" name="first_name" placeholder="Your first name" autocomplete="given-name" />
               <span class="field-error" id="firstNameError">Please enter your first name.</span>
             </div>
             <div class="form-field">
@@ -77,11 +84,21 @@
               <span class="field-error" id="emailError">Please enter a valid email.</span>
             </div>
             <button type="submit" class="btn btn--primary" id="submitBtn">
-              Send me the guide
+              Yes — Send My Free Guide &rarr;
             </button>
             <p class="optin-privacy">
               &#128274; Private &amp; secure. Unsubscribe anytime.
             </p>
+            <div class="form-trust">
+              <div class="form-trust__item">
+                <span class="form-trust__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>4.9 from 2,400+ readers</span>
+              </div>
+              <div class="form-trust__item">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>100% free &mdash; no card needed</span>
+              </div>
+            </div>
           </form>
         </div>
 
@@ -303,9 +320,9 @@
   <section class="cta-section">
     <div class="container container--narrow">
       <div class="reveal">
-        <h2>Ready to feel like yourself again?</h2>
-        <p>Your free Nervous System Rescue Guide is one click away. Start reading in minutes.</p>
-        <a href="#optin" class="btn btn--rose btn--large">Yes — send me the free guide</a>
+        <h2>Ready to Feel Like Yourself Again?</h2>
+        <p>Your free Nervous System Rescue Guide is one click away. Download in seconds. Feel the difference today.</p>
+        <a href="#optin" class="btn btn--rose btn--large">Yes — Send Me the Free Guide &rarr;</a>
         <p class="cta-privacy">&#128274; No spam. Unsubscribe anytime. Your info is safe.</p>
       </div>
     </div>

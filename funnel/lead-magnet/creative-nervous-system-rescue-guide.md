@@ -58,7 +58,99 @@ Every technique in this guide is designed to activate your vagal nerve and guide
 
 ---
 
-## Chapter 2: The 3-Breath Reset
+## Chapter 2: Understanding Overwhelm — What's Actually Happening
+
+Overwhelm is not a character flaw. It is not evidence that you can't handle your life.
+
+Overwhelm is what happens when your nervous system receives more demand than it believes it can safely meet. Your threat-detection system (the amygdala) floods your body with stress hormones. Your prefrontal cortex — the rational, calm, decision-making part of your brain — goes offline. You're no longer thinking clearly. You are surviving.
+
+This is why, when you're overwhelmed, you can't simply "calm down" by deciding to. You can't think your way out of a physiological state. You have to signal safety to your body through the body itself: through breath, movement, sensation, and sound.
+
+That's what this guide teaches you to do.
+
+### The Three Signs Your Nervous System is in Distress
+
+1. **Mental fog or racing thoughts** — Your brain is either shutting down (freeze) or spinning out (flight). Either way, focus is gone.
+2. **Physical tension** — Shoulders up near your ears. Jaw clenched. Fists tight. Shallow breathing. Your body is bracing.
+3. **Emotional reactivity** — Small things feel enormous. You snap, cry, or shut down at triggers that wouldn't normally register.
+
+When you notice any of these, you are not failing. You are receiving information. Your nervous system is asking for help.
+
+---
+
+## Chapter 3: Your Complete 5-Minute Reset Routine
+
+This is the core practice of this guide. It is designed to be done anywhere — at your desk, in a parked car, in a bathroom before a hard conversation, at the kitchen table while the kids are at school.
+
+It combines the most effective nervous system interventions into a single 5-minute sequence. Do this once when you feel overwhelmed. Do it daily as prevention.
+
+---
+
+**The 5-Minute Nervous System Reset**
+
+*Set a timer for 5 minutes or follow the timing below.*
+
+---
+
+### Minute 1: Arrive (Orient)
+
+Slowly turn your head left, then right. Look around the room with soft, curious eyes — not searching for threats, just noticing. Name three things you can see out loud or in your head.
+
+This activates your orienting reflex, which tells the brainstem: *I am scanning my environment. There is no immediate threat. I can settle.*
+
+---
+
+### Minute 2: Breathe (Regulate)
+
+**Exhale first.** Let all the air out of your lungs — a slow, complete exhale through your mouth.
+
+Then inhale for 4 counts through your nose.
+Hold for 2 counts.
+Exhale for 6 counts through your mouth.
+
+Repeat 4 times.
+
+The extended exhale stimulates the vagus nerve and slows your heart rate. You are literally pressing the brake pedal on your stress response.
+
+---
+
+### Minute 3: Ground (Body)
+
+Press both feet flat on the floor. Press your back into the chair. Press your palms flat on your thighs.
+
+Notice the pressure. Notice the weight of your body. Feel where you end and the surface begins.
+
+Take one slow breath and let your exhale be audible — a genuine sigh.
+
+Grounding interrupts the mind's upward spiral by pulling awareness back into the body. You cannot be in full fight-or-flight and be simultaneously feeling the texture of your jeans.
+
+---
+
+### Minute 4: Release (Tension)
+
+- Shrug both shoulders to your ears. Hold 3 counts. Drop them with an exhale. Repeat 3x.
+- Open your jaw wide. Wiggle it. Let it hang slightly open.
+- Make tight fists. Squeeze 5 counts. Spread fingers wide. Shake hands loose.
+
+You store enormous amounts of stress in your shoulders, jaw, and hands. Most people don't notice until they release it — and then feel an immediate shift.
+
+---
+
+### Minute 5: Settle (Anchor)
+
+Place one hand on your chest and one on your belly. Take three slow breaths and feel the rise and fall.
+
+Say silently or aloud: *I am here. I am safe. I can handle what comes next.*
+
+This isn't toxic positivity. It's a direct message to your nervous system. You are offering it co-regulation — the same kind of calm you offer a distressed child.
+
+---
+
+**Done.** Five minutes. You have just moved through a complete nervous system reset.
+
+---
+
+## Chapter 4: The 3-Breath Reset
 
 **Time required:** 60 seconds
 **Best for:** Immediate overwhelm, before difficult conversations, after absorbing bad news, at any transition point in your day
@@ -82,9 +174,17 @@ If one breath feels too abstract, count out loud or tap your thigh on each count
 
 ---
 
-## Chapter 3: 5 Micro-Practices for Busy Days
+## Chapter 5: 3 Core Grounding Tools
 
-These are tools, not rules. Try each one. Keep what works. You only need one.
+These are the three most effective grounding tools for overwhelm, anxiety, and ADHD freeze states. You don't need all of them. You need the one that works for you — try each once and trust your body's response.
+
+---
+
+**Tool 1: The Cold Water Reset**
+**Tool 2: The 5-4-3-2-1 Grounding Scan**
+**Tool 3: Humming for 60 Seconds**
+
+---
 
 ---
 
@@ -145,7 +245,59 @@ Pleasure — intentionally experienced — activates the parasympathetic system 
 
 ---
 
-## Chapter 4: The ADHD Overwhelm Protocol
+## Chapter 6: Your Daily Reset Practice
+
+Regulation is not something you do once when things get bad. It is something you do daily, like eating or sleeping — because your nervous system needs consistent signals of safety to shift out of chronic stress.
+
+The good news: a daily reset practice takes 7 minutes.
+
+---
+
+### The 7-Minute Daily Reset (Morning or Evening)
+
+This is your anchor practice. Do it at the same time each day to build a regulation habit. Morning works best for setting the tone; evening works best for sleep.
+
+**1. One minute of orienting (eyes open, soft gaze)**
+Sit quietly. Look slowly around the room. Let your eyes rest on things that are pleasant, safe, or neutral. You are reassuring your brainstem that the environment is not a threat.
+
+**2. Three minutes of the 5-Minute Reset (minutes 2–4 from Chapter 3)**
+Do the breathwork, grounding, and tension release. Skip the orienting and anchor steps if you're short on time — the middle three minutes are the most potent.
+
+**3. One minute of noticing**
+After the reset, sit still. Notice how your body feels now compared to before. This step is not optional — it is the step that builds neural pathways. Your brain needs to register the shift to learn from it.
+
+**2 minutes: Daily intention**
+Ask yourself one question: *What does my nervous system most need from me today?*
+The answer might be: rest. A boundary. Movement. Quiet. One fewer commitment.
+Write it down if you can. Then honor it — even imperfectly.
+
+---
+
+### The 3-Minute Micro-Reset (Midday)
+
+For when you can't do the full practice:
+1. One extended exhale (30 seconds)
+2. Feet on floor, back pressed into chair (30 seconds)
+3. One hand on chest — three slow breaths (60 seconds)
+4. Shake your hands out and take a sip of water (30 seconds)
+
+This is not a substitute for the full practice. It is a maintenance dose — a small signal of safety that keeps you from accumulating a regulation debt you'll pay at 2am when you can't sleep.
+
+---
+
+### Making It Stick: The Habit Anchor
+
+Pair your daily reset with something you already do:
+- **Morning coffee** — Reset while the kettle boils.
+- **School pickup** — Reset in the parked car for 5 minutes before you walk in.
+- **Before bed** — Reset before you look at your phone one last time.
+- **Bathroom break** — The world's most underrated reset location.
+
+Habit stacking works because your existing routine acts as a trigger. You don't need willpower to remember — the habit remembers for you.
+
+---
+
+## Chapter 7: The ADHD Overwhelm Protocol
 
 When your ADHD brain hits "the wall" — that frozen, paralyzed, everything-feels-impossible state — standard advice doesn't work. You don't need more willpower. You need a neurological reset.
 
@@ -173,7 +325,7 @@ When you've taken even one small step from a place of overwhelm, that is a genui
 
 ---
 
-## Chapter 5: Your 5-Day Starter Plan
+## Chapter 8: Your 5-Day Starter Plan
 
 You don't need to do everything. You need to do something — consistently.
 

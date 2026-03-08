@@ -1,0 +1,37 @@
+Create a complete marketing funnel inside this project.
+
+Structure:
+funnel/
+  landing-page/
+  lead-magnet/
+  email-sequence/
+  offer-page/
+  upsell-page/
+  assets/
+
+Requirements:
+
+Landing page
+- Responsive HTML page with headline, benefits, and opt-in form
+- Fields: first_name, email
+- Simple CSS design
+- Form submits via fetch to /api/lead
+
+Lead magnet
+- Outline and markdown content for a short guide
+- Topic: calming micro-practices for busy parents
+
+Email sequence
+- 5 emails: delivery, education, story, offer intro, conversion
+
+Offer page
+- Product explanation and CTA
+
+Upsell page
+- Simple upgrade offer
+
+Assets
+- Shared CSS and JS files
+
+Ensure all pages link together logically and can run locally.
+

@@ -208,6 +208,37 @@ section { padding: 72px 0; }
   color: var(--white);
 }
 
+.product-visual__badge {
+  display: inline-block;
+  background: var(--rose);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.toolkit-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.toolkit-chip {
+  background: var(--sage-light);
+  color: var(--sage-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(124,154,126,0.2);
+}
+
 .product-visual__title {
   font-family: var(--font-serif);
   font-size: 1.25rem;

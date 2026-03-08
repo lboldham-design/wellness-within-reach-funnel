@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nervous System Rescue Guide — Wellness Within Reach</title>
+  <meta name="description" content="Your free Nervous System Rescue Guide — quick calming micro-practices for busy parents and professionals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/shared.css" />
+  <style>
+    /* ── Guide-specific styles ── */
+    .guide-nav {
+      background: rgba(250,248,245,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow var(--transition);
+    }
+    .guide-nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+
+    .guide-nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .guide-nav__logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+    }
+    .guide-nav__logo span { color: var(--rose); }
+
+    .guide-nav__cta {
+      background: var(--rose);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .guide-nav__cta:hover { background: #b87877; transform: translateY(-1px); }
+
+    /* Cover */
+    .guide-cover {
+      background: linear-gradient(160deg, var(--sage-light) 0%, var(--lavender-light) 60%, var(--cream) 100%);
+      padding: 80px 0 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle, rgba(184,169,201,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .guide-cover__icon {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .guide-cover__eyebrow {
+      display: inline-block;
+      background: var(--rose-light);
+      color: var(--rose);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    .guide-cover h1 {
+      margin-bottom: 16px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guide-cover__sub {
+      font-size: 1.1rem;
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto 36px;
+    }
+
+    .guide-cover__toc {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 40px;
+      box-shadow: var(--shadow-card);
+      text-align: left;
+      min-width: 320px;
+      margin: 0 auto;
+    }
+
+    .guide-cover__toc-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--sage-dark);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .toc-item:last-child { border-bottom: none; }
+
+    .toc-item__num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .toc-item__text {
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    .toc-item__time {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--light);
+      white-space: nowrap;
+    }
+
+    /* Guide body */
+    .guide-body {
+      padding: 64px 0 80px;
+      background: var(--white);
+    }
+
+    .guide-body .container {
+      max-width: 740px;
+    }
+
+    .guide-intro {
+      background: linear-gradient(135deg, var(--sage-light) 0%, var(--lavender-light) 100%);
+      border-radius: var(--radius-md);
+      padding: 32px 36px;
+      margin-bottom: 56px;
+      border-left: 4px solid var(--sage);
+    }
+
+    .guide-intro p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.7;
+    }
+
+    .guide-chapter {
+      margin-bottom: 64px;
+    }
+
+    .chapter-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--cream-dark);
+    }
+
+    .chapter-header__num {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--white);
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .chapter-header h2 {
+      font-size: 1.5rem;
+      color: var(--sage-dark);
+    }
+
+    .guide-body h3 {
+      color: var(--charcoal);
+      font-size: 1.1rem;
+      margin: 28px 0 10px;
+    }
+
+    .guide-body h4 {
+      color: var(--sage-dark);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 20px 0 6px;
+    }
+
+    .guide-body p {
+      margin-bottom: 16px;
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .guide-body ul, .guide-body ol {
+      margin: 0 0 20px 24px;
+    }
+
+    .guide-body li {
+      color: var(--mid);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    .guide-body strong { color: var(--charcoal); }
+
+    .guide-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .guide-meta__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--cream);
+      color: var(--mid);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 50px;
+      border: 1px solid var(--cream-dark);
+    }
+
+    /* Practice card */
+    .practice-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      margin: 28px 0;
+      border-left: 4px solid var(--rose);
+      position: relative;
+    }
+
+    .practice-card--sage  { border-left-color: var(--sage); }
+    .practice-card--lavender { border-left-color: var(--lavender); }
+    .practice-card--gold  { border-left-color: var(--gold); }
+
+    .practice-card__num {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .practice-card--sage  .practice-card__num { color: var(--sage-dark); }
+    .practice-card--lavender .practice-card__num { color: var(--lavender); }
+    .practice-card--gold .practice-card__num { color: var(--gold); }
+
+    .practice-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      color: var(--charcoal);
+    }
+
+    .practice-card .guide-meta { margin-bottom: 16px; }
+
+    .practice-tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--lavender-light);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin-top: 16px;
+    }
+
+    .practice-tip__label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--lavender);
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .practice-tip p {
+      font-size: 0.92rem;
+      color: var(--mid);
+      margin: 0;
+    }
+
+    /* Day plan */
+    .day-plan {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1.5px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .day-plan__item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .day-plan__item:last-child { border-bottom: none; }
+
+    .day-plan__label {
+      background: var(--sage-light);
+      padding: 20px 16px;
+      text-align: center;
+      font-family: var(--font-serif);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .day-plan__content {
+      padding: 20px 24px;
+    }
+
+    .day-plan__content h4 {
+      color: var(--charcoal);
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .day-plan__content p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* States */
+    .two-states {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .state-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .state-card--sympathetic { border-top: 3px solid var(--rose); }
+    .state-card--parasympathetic { border-top: 3px solid var(--sage); }
+
+    .state-card h4 {
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .state-card ul { margin: 0; padding-left: 18px; }
+    .state-card li { font-size: 0.9rem; margin-bottom: 4px; }
+
+    /* CTA section */
+    .guide-cta {
+      background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      text-align: center;
+      margin: 64px 0 0;
+    }
+
+    .guide-cta h2, .guide-cta p { color: var(--white); }
+    .guide-cta h2 { margin-bottom: 16px; }
+    .guide-cta p  { opacity: 0.85; font-size: 1.05rem; margin-bottom: 32px; }
+
+    .guide-cta .btn--rose {
+      font-size: 1.05rem;
+      padding: 18px 44px;
+    }
+
+    .guide-cta__note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Footer */
+    .guide-footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.6);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .guide-footer__logo {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .guide-footer__logo span { color: var(--sage); }
+
+    .guide-footer__links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+    .guide-footer__links a { color: rgba(255,255,255,0.5); transition: color var(--transition); }
+    .guide-footer__links a:hover { color: var(--white); }
+
+    .guide-footer__copy { font-size: 0.78rem; }
+
+    @media (max-width: 640px) {
+      .guide-cover { padding: 56px 0 48px; }
+      .guide-cover__toc { padding: 24px 20px; min-width: unset; width: 100%; }
+      .guide-intro { padding: 24px 20px; }
+      .practice-card { padding: 22px 20px; }
+      .two-states { grid-template-columns: 1fr; }
+      .guide-cta { padding: 40px 24px; }
+      .day-plan__item { grid-template-columns: 64px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="guide-nav" id="mainNav">
+    <div class="container">
+      <div class="guide-nav__inner">
+        <a href="../landing-page/index.html" class="guide-nav__logo">
+          Wellness <span>Within Reach</span>
+        </a>
+        <a href="../offer-page/index.html" class="guide-nav__cta">
+          Upgrade to the 14-Day Challenge &rarr;
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- COVER -->
+  <section class="guide-cover">
+    <div class="container container--mid">
+      <span class="guide-cover__icon">&#127807;</span>
+      <span class="guide-cover__eyebrow">Your free guide</span>
+      <h1>Nervous System Rescue Guide</h1>
+      <p class="guide-cover__sub">
+        Quick calming micro-practices for busy parents &amp; professionals. Read in under 20 minutes. Apply in under 5.
+      </p>
+
+      <div class="guide-cover__toc reveal">
+        <div class="guide-cover__toc-title">What's inside your guide</div>
+
+        <div class="toc-item">
+          <div class="toc-item__num">1</div>
+          <div class="toc-item__text">Understanding Your Stress Response</div>
+          <div class="toc-item__time">3 min</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-item__num">2</div>
+          <div class="toc-item__text">The 3-Breath Reset</div>
+          <div class="toc-item__time">60 sec</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-item__num">3</div>
+          <div class="toc-item__text">5 Micro-Practices for Busy Days</div>
+          <div class="toc-item__time">5 min</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-item__num">4</div>
+          <div class="toc-item__text">The ADHD Overwhelm Protocol</div>
+          <div class="toc-item__time">3 min</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-item__num">5</div>
+          <div class="toc-item__text">Your 5-Day Starter Plan</div>
+          <div class="toc-item__time">2 min</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE BODY -->
+  <main class="guide-body">
+    <div class="container">
+
+      <!-- Intro -->
+      <div class="guide-intro reveal">
+        <p>"You are not broken. You are a capable, caring person running on a system that was never designed for the pace of modern life. This guide is here to help you reset — not overhaul — just enough to breathe again."</p>
+      </div>
+
+      <!-- Chapter 1 -->
+      <div class="guide-chapter reveal">
+        <div class="chapter-header">
+          <div class="chapter-header__num">1</div>
+          <h2>Understanding Your Stress Response</h2>
+        </div>
+
+        <p>Your nervous system is not your enemy. It's an ancient alarm system doing exactly what it was built to do — detect threat and respond. The problem is that it can't tell the difference between a charging tiger and a full inbox.</p>
+
+        <p>Chronic stress, sleep deprivation, ADHD, emotional demands from children or clients — all of it registers as "danger." Your body stays in a low-grade survival state: cortisol elevated, digestion slowed, creativity offline, patience thin.</p>
+
+        <p><strong>This isn't a character flaw. It's biology.</strong></p>
+
+        <p>The good news: your nervous system is <em>plastic</em>. It can be retrained. And you don't need an hour-long yoga class to do it. You need small, consistent signals that tell your body: <em>you are safe</em>.</p>
+
+        <h3>The Two Modes</h3>
+
+        <div class="two-states">
+          <div class="state-card state-card--sympathetic">
+            <h4>&#128165; Sympathetic (Fight or Flight)</h4>
+            <ul>
+              <li>Heart rate elevated</li>
+              <li>Breath shallow, high in chest</li>
+              <li>Digestion paused</li>
+              <li>Vision narrowed</li>
+              <li>Thoughts: urgent, catastrophic, looping</li>
+            </ul>
+          </div>
+          <div class="state-card state-card--parasympathetic">
+            <h4>&#127807; Parasympathetic (Rest and Digest)</h4>
+            <ul>
+              <li>Heart rate slowed</li>
+              <li>Breath deep, belly-led</li>
+              <li>Digestion active</li>
+              <li>Vision wider, more creative</li>
+              <li>Thoughts: slower, clearer, solution-oriented</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Most people with chronic stress are stuck in sympathetic mode even when there's no immediate threat. The body has learned to default there.</p>
+
+        <h3>The ADHD Overlay</h3>
+
+        <p>For those with ADHD, the nervous system adds another layer: <em>dysregulation</em> — rapid swings between over-stimulation and under-stimulation. This is why tasks feel impossible to start, why minor frustrations trigger outsized reactions, and why traditional relaxation advice often doesn't work.</p>
+
+        <p>The practices in this guide are ADHD-informed: short, sensory-based, and designed for a brain that needs <strong>engagement</strong>, not stillness.</p>
+
+        <h3>The Polyvagal Lens (Simplified)</h3>
+
+        <p>Dr. Stephen Porges' Polyvagal Theory tells us there's a third state: the <strong>ventral vagal state</strong> — social safety. This is the calm, connected, creative place you access when you feel truly safe. Every technique in this guide is designed to activate your vagal nerve and guide you toward that state.</p>
+      </div>
+
+      <!-- Chapter 2 -->
+      <div class="guide-chapter reveal">
+        <div class="chapter-header">
+          <div class="chapter-header__num">2</div>
+          <h2>The 3-Breath Reset</h2>
+        </div>
+
+        <div class="guide-meta">
+          <span class="guide-meta__tag">&#9201; 60 seconds</span>
+          <span class="guide-meta__tag">&#9889; Instant relief</span>
+          <span class="guide-meta__tag">&#9989; ADHD-friendly</span>
+        </div>
+
+        <p><strong>Best for:</strong> Immediate overwhelm, before difficult conversations, after absorbing bad news, at any transition point in your day.</p>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Breath 1 — Notice</span>
+          <h3>Notice what's around you</h3>
+          <p>Take a normal inhale through your nose. As you exhale slowly through your mouth, simply notice three things you can see. No evaluation. Just noticing: <em>ceiling, coffee cup, hands</em>.</p>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Breath 2 — Ground</span>
+          <h3>Anchor into your body</h3>
+          <p>Inhale slowly (4 counts). At the top, press both feet firmly into the floor and feel the weight of your body in the chair. Hold 2 counts. Exhale slowly (6 counts). The extended exhale activates the vagal brake.</p>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Breath 3 — Release</span>
+          <h3>Let it go with a real sigh</h3>
+          <p>Take a deep inhale, then let it go with an audible sigh — the kind that sounds like you're releasing a very long week. Don't be polite about it. Let the sigh be real.</p>
+        </div>
+
+        <h3>Why it works</h3>
+        <p>The extended exhale activates the vagus nerve, which directly signals the heart to slow down. The sigh releases stored tension in the diaphragm. Grounding your feet interrupts the mental loop by pulling attention into the body.</p>
+
+        <div class="practice-tip">
+          <span class="practice-tip__label">ADHD tip</span>
+          <p>If one breath feels too abstract, count out loud or tap your thigh on each count. Sensory anchors help.</p>
+        </div>
+      </div>
+
+      <!-- Chapter 3 -->
+      <div class="guide-chapter reveal">
+        <div class="chapter-header">
+          <div class="chapter-header__num">3</div>
+          <h2>5 Micro-Practices for Busy Days</h2>
+        </div>
+
+        <p>These are tools, not rules. Try each one. Keep what works. <strong>You only need one.</strong></p>
+
+        <div class="practice-card">
+          <span class="practice-card__num">Practice 1</span>
+          <h3>The Cold Water Reset</h3>
+          <div class="guide-meta">
+            <span class="guide-meta__tag">&#9201; 30 seconds</span>
+          </div>
+          <p>Run cold water over your wrists for 20–30 seconds. Alternatively, splash your face or hold an ice cube. Cold water activates the mammalian dive reflex — a hard-wired response that slows your heart rate by up to 10–25%. One of the fastest nervous system interventions available.</p>
+          <p><strong>Use it when:</strong> Your heart is racing, you're about to cry at your desk, you've just had a difficult call.</p>
+        </div>
+
+        <div class="practice-card practice-card--lavender">
+          <span class="practice-card__num">Practice 2</span>
+          <h3>The 5-4-3-2-1 Grounding Scan</h3>
+          <div class="guide-meta">
+            <span class="guide-meta__tag">&#9201; 2 minutes</span>
+          </div>
+          <ul>
+            <li><strong>5 things you can see</strong> — look around, name them internally</li>
+            <li><strong>4 things you can physically feel</strong> — the chair, your clothes, the air temperature</li>
+            <li><strong>3 things you can hear</strong> — background sounds, your own breath</li>
+            <li><strong>2 things you can smell</strong> — even subtle scents work</li>
+            <li><strong>1 thing you can taste</strong> — even the memory of your last drink</li>
+          </ul>
+          <div class="practice-tip">
+            <span class="practice-tip__label">ADHD note</span>
+            <p>You can do this while walking, standing in line, or waiting for a meeting to start.</p>
+          </div>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Practice 3</span>
+          <h3>Humming for 60 Seconds</h3>
+          <div class="guide-meta">
+            <span class="guide-meta__tag">&#9201; 60 seconds</span>
+          </div>
+          <p>Hum any note — it doesn't matter which one. Keep your lips gently closed. The vibration stimulates the vagus nerve through the vocal cords and diaphragm. Research shows even 60 seconds can meaningfully shift heart rate variability.</p>
+          <p><strong>Use it when:</strong> Driving to school pickup, cooking, between work tasks, in the shower.</p>
+          <div class="practice-tip">
+            <span class="practice-tip__label">Parent hack</span>
+            <p>Hum during bedtime routines. It regulates you and co-regulates your children simultaneously.</p>
+          </div>
+        </div>
+
+        <div class="practice-card">
+          <span class="practice-card__num">Practice 4</span>
+          <h3>The Shoulders-Jaw-Hands Release</h3>
+          <div class="guide-meta">
+            <span class="guide-meta__tag">&#9201; 90 seconds</span>
+          </div>
+          <ol>
+            <li><strong>Shoulders:</strong> Inhale and shrug both shoulders to your ears. Hold 3 counts. Release with an exhale. Repeat 3x.</li>
+            <li><strong>Jaw:</strong> Open your mouth wide. Wiggle your jaw gently side to side. Let it hang slightly open for a breath.</li>
+            <li><strong>Hands:</strong> Make tight fists, squeeze for 5 counts, then spread all fingers wide. Shake hands out loosely.</li>
+          </ol>
+          <p>Most people carry tension in these areas chronically and have stopped noticing. This sequence brings awareness back into the body.</p>
+        </div>
+
+        <div class="practice-card practice-card--gold">
+          <span class="practice-card__num">Practice 5</span>
+          <h3>One Sensory Pleasure, Intentionally Noticed</h3>
+          <div class="guide-meta">
+            <span class="guide-meta__tag">&#9201; 1–5 minutes</span>
+          </div>
+          <p>Choose one sensory experience: a warm drink, a piece of fruit, sunlight on your face, a smell you love. Give it your full attention for at least 60 seconds. Don't multitask. Don't scroll. Just be with it.</p>
+          <p>Pleasure — intentionally experienced — activates the parasympathetic system and releases dopamine and oxytocin. It is not indulgent. <strong>It is physiologically regulatory.</strong></p>
+          <div class="practice-tip">
+            <span class="practice-tip__label">The invitation</span>
+            <p>Stop treating self-care as a reward for when you've finished everything. You will never finish everything. Pleasure is medicine. Prescribe it daily.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div class="guide-chapter reveal">
+        <div class="chapter-header">
+          <div class="chapter-header__num">4</div>
+          <h2>The ADHD Overwhelm Protocol</h2>
+        </div>
+
+        <p>When your ADHD brain hits "the wall" — that frozen, paralyzed, everything-feels-impossible state — standard advice doesn't work. You don't need more willpower. You need a neurological reset.</p>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Step 1 — 30 seconds</span>
+          <h3>Name It</h3>
+          <p>Say out loud or in your head: <em>"I am overwhelmed. This is a nervous system response. It will pass."</em> Labeling an emotional state reduces amygdala activation. This isn't toxic positivity — it's neuroscience.</p>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Step 2 — 2 minutes</span>
+          <h3>Move Your Body</h3>
+          <p>Walk briskly, do 10 jumping jacks, shake your body out, or dance to one song. ADHD brains regulate through movement. Sitting still and "trying harder" deepens the freeze.</p>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Step 3 — 2 minutes</span>
+          <h3>Reduce the Environment</h3>
+          <p>Close browser tabs. Turn off notifications. Move to a quieter space if possible. Put on noise-cancelling headphones with brown noise or lo-fi music. Lower stimulation allows your prefrontal cortex to come back online.</p>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Step 4</span>
+          <h3>The "One Tiny Thing" Hack</h3>
+          <p>Don't ask: <em>What do I need to do?</em><br>Ask: <em>What is the smallest possible next action — something I could do in under 2 minutes?</em></p>
+          <p>Open the document. Write one sentence. Reply to one email. Wash two dishes. Dopamine is released on task completion, however small. One tiny action creates the neurochemical momentum to do the next.</p>
+          <p><strong>You are not lazy. You are dopamine-depleted. Feed the system.</strong></p>
+        </div>
+
+        <div class="practice-card practice-card--sage">
+          <span class="practice-card__num">Step 5</span>
+          <h3>Give Yourself Credit</h3>
+          <p>When you've taken even one small step from a place of overwhelm, that is a genuine achievement. Acknowledge it. Your brain needs to register success to build the neural pathways that make regulation easier next time.</p>
+        </div>
+      </div>
+
+      <!-- Chapter 5 -->
+      <div class="guide-chapter reveal">
+        <div class="chapter-header">
+          <div class="chapter-header__num">5</div>
+          <h2>Your 5-Day Starter Plan</h2>
+        </div>
+
+        <p>You don't need to do everything. You need to do something — consistently. Each day has one focus and one practice. It takes between 2 and 10 minutes.</p>
+
+        <div class="day-plan">
+          <div class="day-plan__item">
+            <div class="day-plan__label">Day 1</div>
+            <div class="day-plan__content">
+              <h4>The Breath</h4>
+              <p><strong>Morning (2 min):</strong> Do the 3-Breath Reset before you look at your phone. <strong>Evening (2 min):</strong> Do it again before bed. Notice any difference in your body, however subtle.</p>
+            </div>
+          </div>
+          <div class="day-plan__item">
+            <div class="day-plan__label">Day 2</div>
+            <div class="day-plan__content">
+              <h4>The Body</h4>
+              <p><strong>Any time (90 sec):</strong> Do the Shoulders-Jaw-Hands Release. Afterward, stay still for 30 seconds and notice how your body feels different. Begin to trust your body as an ally, not just a vehicle.</p>
+            </div>
+          </div>
+          <div class="day-plan__item">
+            <div class="day-plan__label">Day 3</div>
+            <div class="day-plan__content">
+              <h4>The Senses</h4>
+              <p>Pick a moment — one meal, one drink, one brief outdoor moment. Give it your full, undivided sensory attention for 60 seconds. Notice what you feel emotionally after.</p>
+            </div>
+          </div>
+          <div class="day-plan__item">
+            <div class="day-plan__label">Day 4</div>
+            <div class="day-plan__content">
+              <h4>The Freeze</h4>
+              <p>When you hit resistance: use the ADHD Overwhelm Protocol. Or if today is a good brain day: prepare. Write down your "one tiny thing" protocol for the next time freeze hits. Build your response before you need it.</p>
+            </div>
+          </div>
+          <div class="day-plan__item">
+            <div class="day-plan__label">Day 5</div>
+            <div class="day-plan__content">
+              <h4>The Audit</h4>
+              <p>Sit quietly for 10 minutes and ask yourself: What tools have I actually used? When did I feel most calm? What steals my calm most reliably? What is one small commitment I can make to my nervous system this week?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="guide-cta reveal">
+        <h2>Ready to go deeper?</h2>
+        <p>The 14-Day Bite-Size Reconnect Challenge builds everything in this guide into a structured, daily practice — audio-guided, ADHD-friendly, and designed for real life.</p>
+        <a href="../offer-page/index.html" class="btn btn--rose btn--large">
+          Join the 14-Day Challenge &mdash; $27 &rarr;
+        </a>
+        <p class="guide-cta__note">&#128274; 30-day money-back guarantee &nbsp;&bull;&nbsp; Instant access</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="guide-footer">
+    <div class="container">
+      <div class="guide-footer__logo">Wellness <span>Within Reach</span></div>
+      <div class="guide-footer__links">
+        <a href="../landing-page/index.html">Home</a>
+        <a href="../offer-page/index.html">14-Day Challenge</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="guide-footer__copy">&copy; 2026 Wellness Within Reach. For personal use only.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/shared.js"></script>
+  <script>
+    // Nav scroll shadow
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+</body>
+</html>

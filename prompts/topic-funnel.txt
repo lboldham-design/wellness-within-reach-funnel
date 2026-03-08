@@ -1,0 +1,37 @@
+Create a complete marketing funnel for the topic: {{TOPIC}}
+
+Structure:
+funnel/
+  landing-page/
+  lead-magnet/
+  email-sequence/
+  offer-page/
+  upsell-page/
+  assets/
+
+Requirements:
+
+Landing page
+- Headline and value proposition specific to {{TOPIC}}
+- Benefits section
+- Opt-in form with fields first_name and email
+- Responsive layout
+
+Lead magnet
+- Short guide in markdown based on {{TOPIC}}
+
+Email sequence
+- 5 emails: delivery, education, story, offer intro, conversion
+- All centered on {{TOPIC}}
+
+Offer page
+- Explain a paid product related to {{TOPIC}}
+
+Upsell page
+- Simple upgrade offer
+
+Assets
+- Shared CSS and JS
+
+Ensure pages link correctly and run locally.
+

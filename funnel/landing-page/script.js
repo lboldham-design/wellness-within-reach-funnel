@@ -42,11 +42,13 @@
   }
 
   /* ── Form validation ───────────────────────── */
-  const form       = document.getElementById('optinForm');
-  const firstInput = document.getElementById('firstName');
-  const emailInput = document.getElementById('email');
-  const submitBtn  = document.getElementById('submitBtn');
-  const successMsg = document.getElementById('successMsg');
+  const form        = document.getElementById('lead-form');
+  const firstInput  = document.getElementById('firstName');
+  const emailInput  = document.getElementById('email');
+  const submitBtn   = document.getElementById('submitBtn');
+  const successMsg  = document.getElementById('successMsg');
+  const successName = document.getElementById('successName');
+  const skipOffer   = document.getElementById('skipOffer');
 
   const firstError = document.getElementById('firstNameError');
   const emailError = document.getElementById('emailError');
@@ -70,20 +72,26 @@
     }
   }
 
-  /* ── Simulate async submission ─────────────── */
-  function fakeSubmit() {
-    return new Promise(resolve => setTimeout(resolve, 1200));
+  /* ── Submit lead to API ────────────────────── */
+  async function postLead(first_name, email) {
+    const res = await fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ first_name, email }),
+    });
+    if (!res.ok) throw new Error(`Server error: ${res.status}`);
+    return res.json();
   }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     clearErrors();
 
-    const name  = firstInput.value.trim();
-    const email = emailInput.value.trim();
+    const first_name = firstInput.value.trim();
+    const email      = emailInput.value.trim();
     let valid = true;
 
-    if (!name) {
+    if (!first_name) {
       firstInput.classList.add('error');
       firstError.classList.add('visible');
       valid = false;
@@ -97,27 +105,42 @@
 
     if (!valid) return;
 
-    // Store lead (localStorage for local demo)
-    const leads = JSON.parse(localStorage.getItem('wwr_leads') || '[]');
-    leads.push({ name, email, date: new Date().toISOString() });
-    localStorage.setItem('wwr_leads', JSON.stringify(leads));
-
     setLoading(true);
-    await fakeSubmit();
+
+    try {
+      await postLead(first_name, email);
+    } catch (err) {
+      // Server unavailable (e.g. opened via file://) — fall back to localStorage
+      console.warn('API unreachable, storing lead locally:', err.message);
+      const leads = JSON.parse(localStorage.getItem('wwr_leads') || '[]');
+      leads.push({ first_name, email, date: new Date().toISOString() });
+      localStorage.setItem('wwr_leads', JSON.stringify(leads));
+    }
+
     setLoading(false);
 
-    // Show success
+    // Personalize the confirmation screen
+    const greeting = first_name ? `Welcome, ${first_name}!` : `You're in!`;
+    if (successName) successName.textContent = greeting;
+
+    // Show success regardless of where the lead was stored
     form.style.display = 'none';
     successMsg.classList.add('visible');
 
     showToast('Guide is on its way — check your inbox!', 5000);
-
-    // After 3s, offer challenge
-    setTimeout(() => {
-      const go = confirm('Your guide is sent!\n\nWant to also check out the free 14-Day Reconnect Challenge?');
-      if (go) window.location.href = '../offer-page/index.html';
-    }, 3500);
   });
+
+  // Skip offer button on confirmation screen
+  if (skipOffer) {
+    skipOffer.addEventListener('click', () => {
+      const offerEl = document.querySelector('.success-offer');
+      if (offerEl) {
+        offerEl.style.opacity = '0.4';
+        offerEl.style.pointerEvents = 'none';
+        skipOffer.textContent = 'Enjoy your guide!';
+      }
+    });
+  }
 
   /* ── Smooth scroll for anchor links ───────── */
   document.querySelectorAll('a[href^="#"]').forEach(link => {

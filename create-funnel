@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TOPIC="$1"
+
+if [ -z "$TOPIC" ]; then
+  echo "Usage: create-funnel <topic>"
+  exit 1
+fi
+
+PROMPT=$(sed "s/{{TOPIC}}/$TOPIC/g" prompts/topic-funnel.txt)
+
+echo "$PROMPT" | claude
